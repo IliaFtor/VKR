@@ -15,7 +15,7 @@ def _read_tasks():
     try:
         return json.loads(content)
     except json.JSONDecodeError as e:
-        print(f"⚠️ Ошибка чтения {DATA_FILE}: {e}. Создаём новый файл.")
+        print(f" Ошибка чтения {DATA_FILE}: {e}. Создаём новый файл.")
         DATA_FILE.write_text("[]", encoding="utf-8")
         return []
 
